@@ -145,7 +145,12 @@ $delivery->withAddressLine1('Address1')
  * Credit Card CVV (Security Code)
  * Credit Card Owner
  */
-$card = new Card('4111111111111111', '12', 2016, 123, 'Card Owner Name');
+ 
+ /*
+ Bu kısım 20160311 tarihinde düzeltilmiştir.
+ burda yıl ve cvv tırnak ile yollanmazsa sistem hata veriyor.
+ */
+$card = new Card('4111111111111111', '12', "2016", "123", 'Card Owner Name');
 
 /**
  * Create new Request with params:
